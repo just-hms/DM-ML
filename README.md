@@ -8,9 +8,10 @@ The presentation should cover the following aspects:
 
 Please notify us via email (alessandro.renda@unipi.it, francesco.marcelloni@unipi.it) when you are ready to discuss the proposal. As soon as possible we will allocate a slot during the upcoming lectures for the group discussion.
 
+# Project
 
 - http malicious intrusions
-- ctf attack and defence pcap and other public datasets as reference
+- `ctf attack and defence` Wireshark `pcap` and other public datasets as reference
 
 - problem 
 
