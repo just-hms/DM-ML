@@ -1,5 +1,4 @@
-# salame
-
+from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
@@ -12,8 +11,6 @@ import pandas as pd
 
 from constants import *
 
-# import data
-
 def read_data(path:str, headers:list[str], to_drop:list[str], balance:bool):
 	
 	data = read_csv(
@@ -21,7 +18,6 @@ def read_data(path:str, headers:list[str], to_drop:list[str], balance:bool):
 		low_memory=False,
 		names = headers
 	)
-	# data = data.sample(10_000)
 	
 	# data preprocessing
 	for n in nominals_features:
@@ -30,16 +26,14 @@ def read_data(path:str, headers:list[str], to_drop:list[str], balance:bool):
 
 	# features selection
 	data = pd.DataFrame(data).drop(to_drop,axis='columns')
-
 	if balance:
 		g = data.groupby('Label')
 		data = g.apply(lambda x: x.sample(g.size().min()).reset_index(drop=True))
 
-	# training
-	length = len(data.iloc[1,:]) - 2
+	features_length = len(data.iloc[1,:]) - 1
 	label_index = len(data.iloc[1,:]) - 1
 
-	return data.iloc[:, 0:length], data.iloc[:, label_index]
+	return data.iloc[:, 0:features_length-1], data.iloc[:, label_index]
 
 to_drop = ['ct_flw_http_mthd','is_ftp_login','ct_ftp_cmd'] + flow_features
 
@@ -57,17 +51,23 @@ testing_data, testing_labels = read_data(
 	balance=False
 )
 
-mlp = MLPClassifier(random_state=0)
+classifiers = {
+	"randomforest" : RandomForestClassifier(),
+	"mlp" : MLPClassifier(),
+	"svm" : svm.SVC(),
+}
 
-model = RandomForestClassifier().fit(
-		training_data, 
+for k, v in classifiers.items():
+	model = v.fit(
+		training_data,
 		ravel(training_labels)
 	)
 
-labels = model.predict(testing_data)
+	labels = model.predict(testing_data)
 
-score = accuracy_score(ravel(testing_labels), labels)
-print(score)
+	score = accuracy_score(ravel(testing_labels), labels)
+
+	print(k, score)
 
 
 
