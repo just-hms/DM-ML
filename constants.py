@@ -15,7 +15,7 @@ time_features = [
 	'Dintpkt','tcprtt','synack','ackdat',
 ]
 
-genereated_features = [
+generated_features = [
 	'is_sm_ips_ports','ct_state_ttl','ct_flw_http_mthd',
 	'is_ftp_login','ct_ftp_cmd','ct_srv_src','ct_srv_dst','ct_dst_ltm','ct_src_ltm',
 	'ct_src_dport_ltm','ct_dst_sport_ltm','ct_dst_src_ltm',
@@ -33,6 +33,6 @@ nominals_features = [
 	'service',
 ]
 
-features = flow_features + base_features + content_features + time_features + genereated_features
+features = flow_features + base_features + content_features + time_features + generated_features
 
 headers = features + labels
