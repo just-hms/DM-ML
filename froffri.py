@@ -106,7 +106,7 @@ for k, v in classifiers.items():
 	RocCurveDisplay.from_predictions(ravel(testing_labels), predicted_labels)
 	plt.show()
 	
-
+ 
 # Multiclass classification
 
 print("Multiclass classifier")
