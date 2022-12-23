@@ -12,7 +12,7 @@ No.|Name|Type |Description
 
 No.|Name|Type |Description
 -|-|-|-|
-6|`state`|nominal|"Indicates to the state and its dependent protocol| e.g. ACC| CLO| CON| ECO| ECR| FIN| INT| MAS| PAR| REQ| RST| TST| TXD| URH| URN| and (-) (if not used state)"
+6|`state`|nominal|Indicates to the state and its dependent protocol 	: ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)
 7|`dur`|Float|Record total duration
 8|`sbytes`|Integer|Source to destination transaction bytes 
 9|`dbytes`|Integer|Destination to source transaction bytes
@@ -20,7 +20,7 @@ No.|Name|Type |Description
 11|`dttl`|Integer|Destination to source time to live value
 12|`sloss`|Integer|Source packets retransmitted or dropped 
 13|`dloss`|Integer|Destination packets retransmitted or dropped
-14|`service`|nominal|`http` `ftp` `smtp` `ssh` `dns` `ftp-data` `irc` and `-` if not much used service
+14|`service`|nominal|`http`, `ftp`, `smtp`, `ssh`, `dns`, `ftp-data`, `ir` and `-` if not used
 15|`Sload`|Float|Source bits per second
 16|`Dload`|Float|Destination bits per second
 17|`Spkts`|integer|Source to destination packet count 
@@ -34,7 +34,7 @@ No.|Name|Type |Description
 20|`dwin`|integer|Destination TCP window advertisement value
 21|`stcpb`|integer|Source TCP base sequence number
 22|`dtcpb`|integer|Destination TCP base sequence number
-23|`smeansz`|integer|Mean of the ?ow packet size transmitted by the `src` 
+23|`smeansz`|integer|Mean of the ?	ow packet size transmitted by the `src` 
 24|`dmeansz`|integer|Mean of the ?ow packet size transmitted by the `dst` 
 25|`trans_depth`|integer|Represents the pipelined depth into the connection of http request/response transaction
 26|`res_bdy_len`|integer|Actual uncompressed content size of the data transferred from the servers http service.
@@ -50,7 +50,7 @@ No.|Name|Type |Description
 31|`Sintpkt`|Float|Source interpacket arrival time (mSec)
 32|`Dintpkt`|Float|Destination interpacket arrival time (mSec)
 33|`tcprtt`|Float|TCP connection setup round-trip time, the sum of `SYN` and `ACKDAT`
-34|`synack`|Float|TCP connection setup time, the time between the `SYN` and the `SYN_ACK` packets."
+34|`synack`|Float|TCP connection setup time, the time between the `SYN` and the `SYN_ACK` packets.
 35|`ackdat`|Float|TCP connection setup time, the time between the SYN_ACK and the ACK packets.
 
 # generated_features

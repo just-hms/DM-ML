@@ -87,6 +87,7 @@ for k, v in classifiers.items():
 
 	score = accuracy_score(ravel(testing_labels), labels)
 
+	print(confusion_matrix(testing_labels, labels))
 	print(k, score)
 
 
@@ -136,13 +137,5 @@ for k, v in classifiers.items():
 	labels = model.predict(testing_data)
 	score = accuracy_score(ravel(testing_labels), labels)
 
+	# print(confusion_matrix(testing_labels, labels))
 	print(k, score)
-
-
-
-
-
-
-
-
-
