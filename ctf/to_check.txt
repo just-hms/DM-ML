@@ -1,0 +1,135 @@
+srcid       argus source identifier.
+rank        Ordinal value of this output flow record i.e. sequence number.
+stime       record start time
+ltime       record last time.
+trans       aggregation record count.
+flgs        flow state flags seen in transaction.
+seq         argus sequence number.
+dur         record total duration.
+runtime     total  active flow run time.  This value is generated through aggregation,
+			and is the sum of the records duration.
+idle        time since the last packet activity.  This value is  useful  in  real-time
+			processing, and is the current time - last time.
+mean        average duration of aggregated records.
+stddev      standard deviation of aggregated duration times.
+sum         total accumulated durations of aggregated records.
+min         minimum duration of aggregated records.
+max         maximum duration of aggregated records.
+smac        source MAC addr.
+dmac        destination MAC addr.
+soui        oui portion of the source MAC addr.
+doui        oui portion of the destination MAC addr.
+saddr       source IP addr.
+daddr       destination IP addr.
+proto       transaction protocol.
+sport       source port number.
+dport       destination port number.
+stos        source TOS byte value.
+dtos        destination TOS byte value.
+sdsb        source diff serve byte value.
+ddsb        destination diff serve byte value.
+sco         source IP address country code.
+dco         destination IP address country code.
+sttl        src -> dst TTL value.
+dttl        dst -> src TTL value.
+shops       estimate of number of IP hops from src to this point.
+dhops       estimate of number of IP hops from dst to this point.
+sipid       source IP identifier.
+dipid       destination IP identifier.
+smpls       source MPLS identifier.
+dmpls       destination MPLS identifier.
+autoid      Auto generated identifier (mysql).
+sas         Src origin AS
+das         Dst origin AS
+ias         Intermediate origin AS, AS of ICMP generator
+cause       Argus  record  cause  code.   Valid values are Start, Status, Stop, Close,
+			Error
+nstroke     Number of observed keystrokes.
+snstroke    Number of observed keystrokes from initiator (src) to target (dst).
+dnstroke    Number of observed keystrokes from target (dst) to initiator (src).
+pkts        total transaction packet count.
+spkts       src -> dst packet count.
+dpkts       dst -> src packet count.
+bytes       total transaction bytes.
+sbytes      src -> dst transaction bytes.
+dbytes      dst -> src transaction bytes.
+appbytes    total application bytes.
+sappbytes   src -> dst application bytes.
+dappbytes   dst -> src application bytes.
+pcr         producer consumer  ratio.
+load        bits per second.
+sload       source bits per second.
+dload       destination bits per second.
+loss        pkts retransmitted or dropped.
+sloss       source pkts retransmitted or dropped.
+dloss       destination pkts retransmitted or dropped.
+ploss       percent pkts retransmitted or dropped.
+psloss      percent source pkts retransmitted or dropped.
+pdloss      percent destination pkts retransmitted or dropped.
+retrans     pkts retransmitted.
+sretrans    source pkts retransmitted.
+dretrans    destination pkts retransmitted.
+pretrans    percent pkts retransmitted.
+psretrans   percent source pkts retransmitted.
+pdretrans   percent destination pkts retransmitted.
+sgap        source bytes missing in the data stream. Available after argus-3.0.4
+dgap        destination bytes missing in the data stream. Available after argus-3.0.4
+rate        pkts per second.
+srate       source pkts per second.
+drate       destination pkts per second.
+dir         direction of transaction
+sintpkt     source interpacket arrival time (mSec)
+sintdist    source interpacket arrival time distribution
+sintpktact  source active interpacket arrival time (mSec)
+sintdistact source active interpacket arrival time (mSec)
+sintpktidl  source idle interpacket arrival time (mSec)
+sintdistidl source idle interpacket arrival time (mSec)
+dintpkt     destination interpacket arrival time (mSec)
+dintdist    destination interpacket arrival time distribution
+dintpktact  destination active interpacket arrival time (mSec)
+dintdistact destination active interpacket arrival time distribution (mSec)
+dintpktidl  destination idle interpacket arrival time (mSec)
+dintdistidl destination idle interpacket arrival time distribution
+sjit        source jitter (mSec).
+sjitact     source active jitter (mSec).
+sjitidle    source idle jitter (mSec).
+djit        destination jitter (mSec).
+djitact     destination active jitter (mSec).
+djitidle    destination idle jitter (mSec).
+state       transaction state
+label       Metadata label.
+suser       source user data buffer.
+duser       destination user data buffer.
+swin        source TCP window advertisement.
+dwin        destination TCP window advertisement.
+svlan       source VLAN identifier.
+dvlan       destination VLAN identifier.
+svid        source VLAN identifier.
+dvid        destination VLAN identifier.
+svpri       source VLAN priority.
+dvpri       destination VLAN priority.
+srng        start time for the filter timerange.
+erng        end time for the filter timerange.
+stcpb       source TCP base sequence number
+dtcpb       destination TCP base sequence number
+tcprtt      TCP connection setup round-trip time, the sum of 'synack' and 'ackdat'.
+synack      TCP connection setup time, the  time  between  the  SYN  and  the  SYN_ACK
+			packets.
+ackdat      TCP  connection  setup  time,  the  time  between  the SYN_ACK and the ACK
+			packets.
+tcpopt      The TCP connection options  seen  at  initiation.   The  tcpopt  indicator
+			consists  of a fixed length field, that reports presence of any of the TCP
+			options that argus tracks The format is:
+inode       ICMP intermediate node.
+offset      record byte offset in file or stream.
+smeansz     Mean of the flow packet size transmitted by the src (initiator).
+dmeansz     Mean of the flow packet size transmitted by the dst (target).
+
+spktsz      histogram for the src packet size distribution
+smaxsz      maximum packet size for traffic transmitted by the src.
+dpktsz      histogram for the dst packet size distribution
+dmaxsz      maximum packet size for traffic transmitted by the dst.
+sminsz      minimum packet size for traffic transmitted by the src.
+dminsz      minimum packet size for traffic transmitted by the dst.
+
+dminsz      minimum packet size for traffic transmitted by the dst.
