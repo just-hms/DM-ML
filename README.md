@@ -27,7 +27,3 @@ For more information about the data set, please contact the authors:
 
 1. Nour Moustafa: e-mail (nour.abdelhameed@student.adfa.edu.com )
 2. Jill Slay: e-mail(i.slay@adfa.edu.au)
-
-
-ct_flw_http_mthd
-is_ftp_login
