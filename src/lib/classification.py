@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 from sklearn.naive_bayes import CategoricalNB, GaussianNB
 from sklearn.neural_network import MLPClassifier
 
-from principal_component_analysis import PCA_extract
+from src.principal_component_analysis import PCA_extract
 
-from constants import *
+from src.constants import *
 
 # Extracting data
 
