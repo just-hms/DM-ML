@@ -1,18 +1,12 @@
-from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import Perceptron
 from sklearn.model_selection import train_test_split
 
 from sklearn.metrics import accuracy_score, ConfusionMatrixDisplay, RocCurveDisplay
 from pandas import read_csv
 from numpy import ravel
 import matplotlib.pyplot as plt
-from sklearn.naive_bayes import CategoricalNB, GaussianNB
-from sklearn.neural_network import MLPClassifier
 
-from src.principal_component_analysis import PCA_extract
-
-from src.constants import *
+from principal_component_analysis import PCA_extract
 
 # Extracting data
 
