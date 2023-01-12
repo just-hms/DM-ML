@@ -1,3 +1,5 @@
+import pickle
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, ConfusionMatrixDisplay, RocCurveDisplay
@@ -8,7 +10,7 @@ import matplotlib.pyplot as plt
 
 from principal_component_analysis import PCA_extract
 
-def chooseMostAccurateClassificator(X, labels, classifiers):
+def chooseMostAccurateModel(X, labels, classifiers):
 
 	best_model = {}
 	best_score = 0
@@ -60,25 +62,34 @@ classifiers={
 
 print("Binary classifier")
 
-chooseMostAccurateClassificator(X, labels, classifiers=classifiers)
+model = chooseMostAccurateModel(X, labels, classifiers=classifiers)
+
+model_path = "./../assets/models/"
+pickle.dump(model, open(model_path + 'binary_model', 'wb'))
 
 # removing non attacks
 X = X[labels != 0]
 classes = classes[labels != 0]
 
 print("Multiclass classifier")
-chooseMostAccurateClassificator(X, classes, classifiers=classifiers)
+
+model = chooseMostAccurateModel(X, classes, classifiers=classifiers)
+pickle.dump(model, open(model_path + 'multiclass_model', 'wb'))
 
 # PCA
 
 X, labels, classes, components = PCA_extract(data, verbose=True)	
 
 print("Binary classifier")
-chooseMostAccurateClassificator(X, labels, classifiers=classifiers)
+
+model = chooseMostAccurateModel(X, labels, classifiers=classifiers)
+pickle.dump(model, open(model_path + 'binary_model_pca', 'wb'))
 
 # removing non attacks
 X = X[labels != 0]
 classes = classes[labels != 0]
 
 print("Multiclass classifier")
-chooseMostAccurateClassificator(X, classes, classifiers=classifiers)
+
+model = chooseMostAccurateModel(X, classes, classifiers=classifiers)
+pickle.dump(model, open(model_path + 'multiclass_model_pca', 'wb'))
