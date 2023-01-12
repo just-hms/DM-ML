@@ -1,3 +1,5 @@
+# LAUNCH using linux
+
 if [[ $# -ne 1 ]] && [[ $# -ne 2 ]] ; then 
 	echo "wrong format!"
 	exit
