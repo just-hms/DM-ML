@@ -1,3 +1,4 @@
+## extracted
 
 |ra			|dataset		|used			|
 |-			|-				|-				|	
@@ -37,8 +38,10 @@
 |synack		|synack			|synack	 		|	x
 |ackdat		|ackdat			|ackdat	 		|	x
 
-is_sm_ips_ports
-ct_state_ttl
-ct_srv_src
-ct_dst_ltm
-ct_src_ltm        
+##s aggregated
+
+is_sm_ips_ports									v									
+ct_state_ttl									v	
+ct_srv_src										v
+ct_dst_ltm										v
+ct_src_ltm										v       

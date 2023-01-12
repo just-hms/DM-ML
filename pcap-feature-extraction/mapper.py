@@ -1,5 +1,8 @@
+
+chosen_features = [ "dsport", "proto", "state", "dur", "sbytes", "dbytes", "sttl", "dttl", "service", "Sload", "Dload", "swin", "stcpb", "dtcpb", "smeansz", "dmeansz", "trans_depth", "res_bdy_len", "Sjit", "Djit", "Stime", "Sintpkt", "Dintpkt", "tcprtt", "is_sm_ips_ports", "ct_state_ttl", "ct_flw_http_mthd", "ct_srv_src", "ct_dst_ltm", "ct_src_ltm" ]
+
 proto_mapper = {
-	'a/n': 106,
+	'-': 106,
 	
 	'udp': 0, 'arp': 1, 'tcp': 2, 'ospf': 3, 'icmp': 4, 'igmp': 5, 'sctp': 6, 'udt': 7, 'sep': 8, 'sun-nd': 9, 'swipe': 10, 'mobile': 11, 'pim': 12, 
 	'rtp': 13,'ipnip': 14, 'ip': 15, 'ggp': 16, 'st2': 17, 'egp': 18, 'cbt': 19, 'emcon': 20, 'nvp': 21, 'igp': 22, 'xnet': 23, 'argus': 24, 
@@ -16,7 +19,7 @@ proto_mapper = {
 }
 
 state_mapper = {
-	'no': 10,
+	'-': 10,
 
 	'CON': 0, 'INT': 1, 'FIN': 2, 'URH': 3, 'REQ': 4, 'ECO': 5, 'RST': 6, 'CLO': 7, 'TXD': 8, 'URN': 9, 'ACC': 11, 'PAR': 12,
 	'MAS': 13, 'TST': 14, 'ECR': 15,
@@ -26,4 +29,11 @@ service_mapper = {
 	'-': 1,
 
 	'dns': 0, 'http': 2, 'smtp': 3, 'ftp-data': 4, 'ftp': 5, 'ssh': 6, 'pop3': 7, 'snmp': 8, 'ssl': 9, 'irc': 10, 'radius': 11, 'dhcp': 12,
+}
+
+dsport_mapper = {
+	# '-': -1,
+	'http': 80,
+	'https': 443, 
+	'rmtcfg' : 1236,
 }
