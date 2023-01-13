@@ -1,5 +1,6 @@
 
-chosen_features = [ "dsport", "proto", "state", "dur", "sbytes", "dbytes", "sttl", "dttl", "service", "Sload", "Dload", "swin", "stcpb", "dtcpb", "smeansz", "dmeansz", "trans_depth", "res_bdy_len", "Sjit", "Djit", "Stime", "Sintpkt", "Dintpkt", "tcprtt", "is_sm_ips_ports", "ct_state_ttl", "ct_flw_http_mthd", "ct_srv_src", "ct_dst_ltm", "ct_src_ltm" ]
+chosen_features = [ 
+	"dsport", "proto", "state", "dur", "sbytes", "dbytes", "sttl", "dttl", "service", "Sload", "Dload", "swin", "stcpb", "dtcpb", "smeansz", "dmeansz", "trans_depth", "res_bdy_len", "Sjit", "Djit", "Stime", "Sintpkt", "Dintpkt", "tcprtt", "is_sm_ips_ports", "ct_state_ttl", "ct_flw_http_mthd", "ct_srv_src", "ct_dst_ltm", "ct_src_ltm" ]
 
 proto_mapper = {
 	'-': 106,

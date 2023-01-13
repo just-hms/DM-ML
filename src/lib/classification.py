@@ -62,9 +62,9 @@ classifiers={
 
 print("Binary classifier")
 
-model = chooseMostAccurateModel(X, labels, classifiers=classifiers)
-
 model_path = "./../assets/models/"
+
+model, _ = chooseMostAccurateModel(X, labels, classifiers=classifiers)
 pickle.dump(model, open(model_path + 'binary_model', 'wb'))
 
 # removing non attacks
@@ -73,7 +73,7 @@ classes = classes[labels != 0]
 
 print("Multiclass classifier")
 
-model = chooseMostAccurateModel(X, classes, classifiers=classifiers)
+model, _ = chooseMostAccurateModel(X, classes, classifiers=classifiers)
 pickle.dump(model, open(model_path + 'multiclass_model', 'wb'))
 
 # PCA
@@ -82,7 +82,7 @@ X, labels, classes, components = PCA_extract(data, verbose=True)
 
 print("Binary classifier")
 
-model = chooseMostAccurateModel(X, labels, classifiers=classifiers)
+model, _ = chooseMostAccurateModel(X, labels, classifiers=classifiers)
 pickle.dump(model, open(model_path + 'binary_model_pca', 'wb'))
 
 # removing non attacks
@@ -91,5 +91,5 @@ classes = classes[labels != 0]
 
 print("Multiclass classifier")
 
-model = chooseMostAccurateModel(X, classes, classifiers=classifiers)
+model, _ = chooseMostAccurateModel(X, classes, classifiers=classifiers)
 pickle.dump(model, open(model_path + 'multiclass_model_pca', 'wb'))
