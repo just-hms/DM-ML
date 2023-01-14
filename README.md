@@ -3,9 +3,11 @@
 ## slides
 - https://docs.google.com/presentation/d/1fwgk8nKJDRx0v9-EvUSLTx0WgS6IKobN/edit
 
-## resources
-- https://mayanknauni.com/?p=4392
+## base
 - https://link.springer.com/article/10.1007/s10586-019-03008-x
+
+# resources
+- https://mayanknauni.com/?p=4392
 - https://github.com/AntoineRondelet/side-channel-exploit-https/blob/master/pyshark-doc.md
 - https://www.kaggle.com/code/andira/eda-pada-unsw-nb15
 - https://manpages.ubuntu.com/manpages/bionic/man1/ra.1.html
