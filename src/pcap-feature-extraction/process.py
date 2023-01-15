@@ -8,7 +8,6 @@ data = pd.read_csv('./extracted.csv',low_memory=False)
 data['is_sm_ips_ports'] = data.apply(lambda row: row['Sport'] == row['Dport'] and row['SrcAddr'] == row['DstAddr'], axis=1)
 
 # No. for each state (6) according to specific range of values for source/destination time to live (10) (11).
-# TODO : put something here
 data['ct_state_ttl'] = 0
 
 # No. of connections that contain the same service (14) and source address (1) in 100 connections according to the last time (26).
