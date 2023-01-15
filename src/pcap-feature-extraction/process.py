@@ -41,35 +41,22 @@ data['ct_srv_src'] = ct_srv_src
 
 data.info()
 
-# data preprocessing
+# Data preprocessing
 
-data.drop(inplace=True, columns=[
-	'SrcAddr',
-	'Sport',
-	'DstAddr',
-	'SrcLoss',
-	'DstLoss',
-	'SrcPkts',
-	'DstPkts',
-	'DstWin',
-	'LastTime',
-	'SynAck',
-])
-
+data.drop(inplace=True, columns=discarded_features)
 
 # rename using original name scheme
 data.columns = chosen_features
 
 # map nominal features
 
-data['dsport'] = data['proto'].apply(lambda x : proto_mapper['-'] if not x in proto_mapper else proto_mapper[x])
-
 data['proto'] = data['proto'].apply(lambda x : proto_mapper['-'] if not x in proto_mapper else proto_mapper[x])
 data['state'] = data['state'].apply(lambda x : state_mapper['-'] if not x in state_mapper else state_mapper[x])
 data['service'] = data['service'].apply(lambda x : service_mapper['-'] if not x in service_mapper else service_mapper[x])
+
 data['dsport'] = data['dsport'].apply(lambda x : x if not x in dsport_mapper else dsport_mapper[x])
 
 data.fillna(-1, inplace=True)
 data.info()
 
-data.to_csv('./aggregated.csv')
+data.to_csv('./processed.csv')

@@ -1,3 +1,13 @@
+# to-launch
+
+type
+
+```sh
+$ ./extract.sh ./../../data/CTF/CC22-final/filename > extracted.csv
+```
+
+and process it with `process.py`
+
 # Features name in `ra` vs the dataset
 
 |`ra`			|dataset		|to_extract		| used	|		
@@ -39,7 +49,7 @@
 |`ackdat`		|`ackdat`		|`ackdat`	 	|		|
 
 
-## aggregated
+## Aggregated
 
 |to_extract				| used	|		
 |-						|	-	|	
