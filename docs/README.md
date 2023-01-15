@@ -14,7 +14,7 @@ No.|Name|Type |Description
 
 No.|Name|Type |Description
 -|-|-|-|
-6|`state`|nominal|Indicates to the state and its dependent protocol 	: ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)
+6|`state`|nominal|Indicates to the state and its dependent protocol: ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)
 7|`dur`|Float|Record total duration
 8|`sbytes`|Integer|Source to destination transaction bytes 
 9|`dbytes`|Integer|Destination to source transaction bytes
