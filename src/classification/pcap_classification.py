@@ -22,13 +22,16 @@ multiclass_model = pickle.load(open(models_folder + 'multiclass_model', 'rb'))
 
 # scale features based on the dataset baseline
 
-pcap_baseline_scaled = pcap_baseline 
+pcap_baseline_scaled = pcap_baseline.copy() 
 pcap_also_attacks_scaled = pcap_also_attacks
+
+print('SCALING FACTORS')
 
 float_features_to_scale = [
     'dur', 'sbytes', 'dbytes', 'Sload', 'Dload', 'swin', 'res_bdy_len',
     'Sjit', 'Djit', 'Stime', 'Sintpkt', 'Dintpkt', 'tcprtt',
 ]
+
 
 for f in float_features_to_scale:
 
@@ -61,6 +64,17 @@ for f in int_features_to_scale:
 
 
 
+print('\nPCAP BASELINE WITHOUT SCALING')
+
+binary_labels = binary_model.predict(pcap_baseline)
+plot(
+    ['Attack' if x == 1 else 'Normal' for x in binary_labels], 
+    title = 'Binary classification of the pcap_baseline without scaling'
+)
+
+print('false positive [%]: ', (sum(binary_labels)/len(binary_labels))*100)
+
+
 print('\nBASELINE')
 
 binary_labels = binary_model.predict(pcap_baseline_scaled)
@@ -69,13 +83,14 @@ plot(
     title = 'Binary classification of the pcap_baseline (only normal traffic)'
 )
 
+print('false positive [%]: ', (sum(binary_labels)/len(binary_labels))*100)
+print('accuracy on baseline [%]: ', (1-sum(binary_labels)/len(binary_labels))*100)
+
+
 print('\nATTACKS')
 
 binary_labels = binary_model.predict(pcap_also_attacks_scaled)
-plot(
-    ['Attack' if x == 1 else 'Normal' for x in binary_labels], 
-    title = 'Binary classification of the pcap'
-)
+labels = multiclass_model.predict(pcap_also_attacks_scaled)
+labels[binary_labels == 0] = "Normal"
 
-labels = multiclass_model.predict(pcap_also_attacks_scaled[binary_labels != 0])
-plot(labels, title = 'Multiclass classification of the pcap')
+plot(labels, title = 'Classification of the pcap')
