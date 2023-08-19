@@ -1,31 +1,13 @@
-# DM-ML
+# Intrusion Detection System with Machine Learning for Wireshark PCAP Analysis
 
-## slides
-- https://docs.google.com/presentation/d/1fwgk8nKJDRx0v9-EvUSLTx0WgS6IKobN/edit
+This project implements an Intrusion Detection System (IDS) that utilizes advanced Machine Learning techniques to identify malicious requests within Wireshark pcap files. The primary dataset employed for training and testing the system is the UNSW-NB15 dataset, a widely recognized benchmark in network security research.
 
-## base
+For comprehensive information about the project, its methodology, and results, refer to the [documentation.pdf](./docs/documentation.pdf) file. This documentation provides insights into the system's architecture, the Machine Learning algorithms employed, and a thorough analysis of its performance in detecting various types of network intrusions.
+
+## resources
 - https://link.springer.com/article/10.1007/s10586-019-03008-x
-
-# resources
 - https://mayanknauni.com/?p=4392
 - https://github.com/AntoineRondelet/side-channel-exploit-https/blob/master/pyshark-doc.md
 - https://www.kaggle.com/code/andira/eda-pada-unsw-nb15
 - https://manpages.ubuntu.com/manpages/bionic/man1/ra.1.html
 - https://www.systutorials.com/docs/linux/man/1-ra/
-
-## similar study
-- https://medium.com/@subrata.maji16/building-an-intrusion-detection-system-on-unsw-nb15-dataset-based-on-machine-learning-algorithm-16b1600996f5
-
-## dataset website
-
-- https://cloudstor.aarnet.edu.au/plus/index.php/s/2DhnLGDdEECo4ys?path=%2F
-
-Free use of the UNSW-NB15 dataset for academic research purposes is hereby granted in perpetuity. Use for commercial purposes is strictly prohibited. Nour Moustafa and Jill Slay have asserted their rights under the Copyright. To who intend using the UNSW-NBIS data set has to cite the two following papers that elaborate its creation.
-
-1. Moustafa, Nour, and Jill Slay. "lÄSW-NB15: a comprehensive data set for network intmsion detection systems (UNSW-NB15 network data set)- "Military Communications and Information Systems Conference (MilCIS), 2015. IEEE, 2015.
-2. Moustafa, Nour, and Jill Slay. "The evaluation of Network Anomaly Detection Systems: Statistical analysis of the UNSW-NB15 data set and the comparison vath the KDD99 data set." Information Security Journal: A Global Perspective (2016): 1-14.
-
-For more information about the data set, please contact the authors:
-
-1. Nour Moustafa: e-mail (nour.abdelhameed@student.adfa.edu.com )
-2. Jill Slay: e-mail(i.slay@adfa.edu.au)
