@@ -1,4 +1,6 @@
-# flow_features
+# Features description
+
+## Flow features
 
 No.|Name|Type |Description
 -|-|-|-|
@@ -8,11 +10,11 @@ No.|Name|Type |Description
 4|`dsport`|integer|Destination port number
 5|`proto`|nominal|Transaction protocol
 
-# base_features
+## Base_features
 
 No.|Name|Type |Description
 -|-|-|-|
-6|`state`|nominal|Indicates to the state and its dependent protocol 	: ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)
+6|`state`|nominal|Indicates to the state and its dependent protocol: ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)
 7|`dur`|Float|Record total duration
 8|`sbytes`|Integer|Source to destination transaction bytes 
 9|`dbytes`|Integer|Destination to source transaction bytes
@@ -26,7 +28,7 @@ No.|Name|Type |Description
 17|`Spkts`|integer|Source to destination packet count 
 18|`Dpkts`|integer|Destination to source packet count
 
-# content_features
+## Content_features
 
 No.|Name|Type |Description
 -|-|-|-|
@@ -39,7 +41,7 @@ No.|Name|Type |Description
 25|`trans_depth`|integer|Represents the pipelined depth into the connection of http request/response transaction
 26|`res_bdy_len`|integer|Actual uncompressed content size of the data transferred from the servers http service.
 
-# time_features
+## Time features
 
 No.|Name|Type |Description
 -|-|-|-|
@@ -53,7 +55,7 @@ No.|Name|Type |Description
 34|`synack`|Float|TCP connection setup time, the time between the `SYN` and the `SYN_ACK` packets.
 35|`ackdat`|Float|TCP connection setup time, the time between the SYN_ACK and the ACK packets.
 
-# generated_features
+## Generated features
 No.|Name|Type |Description
 -|-|-|-|
 36|`is_sm_ips_ports`|Binary|If source (1) and destination (3)IP addresses equal and port numbers (2)(4)  equal then, this variable takes value 1 else 0
@@ -69,7 +71,7 @@ No.|Name|Type |Description
 46|`ct_dst_sport_ltm`|integer|No of connections of the same destination address (3) and the source port (2) in 100 connections according to the last time (26).
 47|`ct_dst_src_ltm`|integer|No of connections of the same source (1) and the destination (3) address in in 100 connections according to the last time (26).
 
-# labels
+## Labels
 
 No.|Name|Type |Description
 -|-|-|-|
